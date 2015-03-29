@@ -1,0 +1,10 @@
+---
+
+- name: CRON | Generate config
+  template:
+    src: "etc/cron.d/config.j2"
+    dest: "/etc/cron.d/{{ cron_jobs_group }}"
+    owner: root
+    group: root
+    mode: 0600
+  notify: restart cron

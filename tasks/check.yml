@@ -1,0 +1,6 @@
+---
+
+- name: CRON | Check configuration
+  fail:
+    msg: "Bad configuration. Variable `cron_jobs_group` can't contain a dot (.), othwerwise crond will skip your jobs"
+  when: "'.' in cron_jobs_group"

@@ -1,0 +1,15 @@
+---
+
+cron_packages:
+  - cron
+
+# Any scalar value - will be config's filename 
+# If you use this role more than one time per one playbook
+cron_jobs_group: ansible
+
+cron_jobs: []
+#   - '* * * * *  user /bin/sh /absolute/path/to/job.sh'
+
+cron_service_name: cron
+cron_service_enabled: yes
+cron_service_state: started
