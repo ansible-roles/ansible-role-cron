@@ -2,9 +2,10 @@
 
 - name: CRON | Generate config
   template:
-    src: "etc/cron.d/config.j2"
+    src: "{{ cron_template }}"
     dest: "/etc/cron.d/{{ cron_jobs_group }}"
-    owner: root
-    group: root
-    mode: 0600
+    owner: "{{ cron_owner }}"
+    group: "{{ cron_group }}"
+    mode: "{{ cron_mode }}"
+  when: cron_jobs != false
   notify: restart cron

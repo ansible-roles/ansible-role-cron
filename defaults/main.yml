@@ -3,7 +3,13 @@
 cron_packages:
   - cron
 
-# Any scalar value - will be config's filename 
+cron_group: root
+cron_owner: root
+cron_mode: 0644
+
+cron_template: "etc/cron.d/config.j2"
+
+# Any scalar value - will be config's filename
 # If you use this role more than one time per one playbook
 cron_jobs_group: ansible
 
