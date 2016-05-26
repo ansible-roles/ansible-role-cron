@@ -1,8 +1,12 @@
 ---
 
+dependencies: []
+
 galaxy_info:
   author: igor_mukhin
   description: Installs and configures cron
+  galaxy_tags:
+    - web
   min_ansible_version: 1.6
   license: MIT
   platforms:
