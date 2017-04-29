@@ -5,4 +5,4 @@
     pkg: "{{ item }}"
     state: present
   with_items: "{{ cron_packages }}"
-  when: "{{ cron_packages != false }}"
+  when: "cron_packages != false"
