@@ -7,5 +7,5 @@
     owner: "{{ cron_owner }}"
     group: "{{ cron_group }}"
     mode: "{{ cron_mode }}"
-  when: "{{ cron_jobs != false }}"
+  when: "cron_jobs != false"
   notify: restart cron
